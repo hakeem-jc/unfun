@@ -1,0 +1,26 @@
+.header {
+    padding: 30px 40px;
+}
+
+.logo, .author-logo {
+    color: white;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.author-logo {
+    float: right;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .header-right {
+        float: none;
+    }
+}

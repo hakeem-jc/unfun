@@ -1,0 +1,10 @@
+@import './Reset.css';
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.app-background {
+    height: 100vh;
+    background-color: #020202;
+}
