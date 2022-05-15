@@ -2,8 +2,6 @@ import { useState } from 'react';
 import { fetchQuote } from './content-logic';
 import './content.css';
 
-let url = 'http://127.0.0.1:4000';
-
 export const Content = () => {
     // Button Text
     const starterText = "Let's Go";
@@ -19,7 +17,13 @@ export const Content = () => {
     // Set current quote
     const setQuote = () => {
         if (btnText === starterText) setBtnText("Next");
-        setContent(fetchQuote());
+        let newQuote = {};
+
+        // TODO - Move duplicate check to server when API is integrated
+        do {
+            newQuote = fetchQuote()
+        } while (content.quote === newQuote.quote);
+        setContent(newQuote);
     }
 
     return (
