@@ -54,3 +54,23 @@ body {
     background-color: #4267B2;
     color: #fff;
 }
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+    .content-container {
+        top: 40%;
+    }
+    .content-header {
+        font-size: 60px;
+    }
+    .content-btn { 
+        padding: 2rem 3.2rem;
+        border-radius: 2.5rem;
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    .content-container {
+        top: 40%;
+    }
+}

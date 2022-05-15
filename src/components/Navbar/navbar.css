@@ -16,7 +16,7 @@
 
 @media screen and (max-width: 768px) {
     .logo {
-        float: none;
+        float: left;
         display: block;
         text-align: left;
     }
