@@ -1,15 +1,16 @@
 import './Styles/App.css';
-import { Navbar } from './components/Navbar/navbar';
-import { Content } from './components/Content/content';
-import { Footer } from './components/Footer/footer';
+import Landing from './pages/Landing';
+import PageNotFound from './pages/PageNotFound';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <section className='app-background'>
-        <Navbar/>
-        <Content/>
-        <Footer />
-    </section>
+   <Router>
+     <Routes>
+      <Route path='/' element={<Landing />}/>
+      <Route path='*' element={<PageNotFound />}/>
+     </Routes>
+   </Router>
   );
 }
 
