@@ -1,5 +1,5 @@
 import './Styles/App.css';
-import Landing from './pages/Landing';
+import { Landing } from './pages/Landing';
 import PageNotFound from './pages/PageNotFound';
 import ErrorFallback from './pages/ErrorFallback';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

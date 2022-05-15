@@ -1,15 +1,10 @@
-import { Navbar } from "../../components/Navbar/navbar";
 import { Content } from "../../components/Content/content";
-import { Footer } from "../../components/Footer/footer";
+import { Container } from "../../components/Container";
 
-function Landing() {
+export const Landing = () => {
     return (
-      <section className='app-background'>
-          <Navbar/>
-          <Content/>
-          <Footer />
-      </section>
+        <Container>
+            <Content />
+        </Container>
     );
-  }
-  
-  export default Landing;
+}

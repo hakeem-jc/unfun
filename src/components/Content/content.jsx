@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { fetchQuote } from './content-logic';
-import './content.css';
 
 export const Content = () => {
     // Button Text
