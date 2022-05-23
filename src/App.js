@@ -1,4 +1,4 @@
-import './styles/App.css';
+import './Styles/App.css';
 import { Landing } from './pages/Landing';
 import { PageNotFound }from './pages/PageNotFound';
 import { ErrorFallback } from './pages/ErrorFallback';
