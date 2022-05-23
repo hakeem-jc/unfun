@@ -1,10 +1,14 @@
-import { useState } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { fetchQuote } from './content-logic';
+import { AppContext } from '../../store/context';
 
 export const Content = () => {
     // Button Text
     const starterText = "Let's Go";
     const [btnText, setBtnText] = useState(starterText);
+    
+    // Language
+    let langContext = useContext(AppContext);
 
     // Dynamic Content
     let [content, setContent] = useState({
@@ -17,13 +21,20 @@ export const Content = () => {
     const setQuote = () => {
         if (btnText === starterText) setBtnText("Next");
         let newQuote = {};
-
-        // TODO - Move duplicate check to server when API is integrated
         do {
-            newQuote = fetchQuote()
+            newQuote = fetchQuote(langContext.language)
         } while (content.quote === newQuote.quote);
         setContent(newQuote);
     }
+
+    useEffect(() => {
+       if (langContext.language === 'EN') {
+        setBtnText("Next");
+       } else if (langContext.language === 'ES') {
+        setBtnText("Próxima");
+       }
+
+    },[langContext.language])
 
     return (
         <>
